@@ -51,7 +51,7 @@ flowchart TD
     end
 
     subgraph Domain ["Domain Logic (Pure C++)"]
-        IMode["<<interface>> ICalculatorMode"]
+        IMode["ICalculatorMode (Interface)"]
         StdMode["StandardMode (+, -, *, /, %)"]
         SciMode["ScientificMode (Trig, Log, Pow, Sqrt)"]
         ProgMode["ProgrammerMode (Hex, Dec, Oct, Bin, Bitwise)"]
@@ -64,9 +64,9 @@ flowchart TD
     GUI --> CalcFacade
     CalcFacade --> HistMgr
     CalcFacade --> IMode
-    IMode <|.. StdMode
-    IMode <|.. SciMode
-    IMode <|.. ProgMode
+    IMode -.-> StdMode
+    IMode -.-> SciMode
+    IMode -.-> ProgMode
     StdMode --> ShuntingYard
     SciMode --> ShuntingYard
     CalcFacade --> StatEngine
@@ -258,3 +258,4 @@ Special appreciation to the engineering mentors at **Auspify Technologies** for 
 <div align="center">
   <sub>Engineered with precision in C++17 & Qt6. Licensed under the MIT License.</sub>
 </div>
+
