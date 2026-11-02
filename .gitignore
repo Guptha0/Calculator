@@ -1,0 +1,34 @@
+# Build directories
+build/
+bin/
+obj/
+
+# Compiled binaries and executables
+*.exe
+calculator
+CalculatorGUI
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Object and dependency files
+*.o
+*.obj
+*.d
+*.a
+*.so
+*.dll
+
+# IDE and Editor configurations
+.vscode/
+.idea/
+*.swp
+*~
+
+# Operating system files
+.DS_Store
+Thumbs.db
